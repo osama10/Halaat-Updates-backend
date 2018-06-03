@@ -1,5 +1,6 @@
 package com.vend.halaatupdate.halaatupdtae.Entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
@@ -28,7 +29,7 @@ public class UserModel {
     private String occupation ;
 
     @OneToMany(mappedBy = "user")
-    @JsonManagedReference
+    @JsonBackReference
     private List<UpdateModel> updates;
 
     public UserModel() {

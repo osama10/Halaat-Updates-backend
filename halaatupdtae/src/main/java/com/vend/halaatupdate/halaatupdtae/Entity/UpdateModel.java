@@ -1,6 +1,7 @@
 package com.vend.halaatupdate.halaatupdtae.Entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 
@@ -30,7 +31,7 @@ public class UpdateModel {
 
     @ManyToOne
     @JoinColumn(name="user_id" , insertable=false, updatable=false)
-    @JsonBackReference
+    @JsonManagedReference
     private  UserModel user;
 
     public UpdateModel() {
